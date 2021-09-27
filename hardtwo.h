@@ -2,6 +2,7 @@
 #define HARDTWO_H
 
 #include <QDialog>
+#include<QTimerEvent>
 
 namespace Ui {
 class hardTwo;
@@ -14,6 +15,7 @@ class hardTwo : public QDialog
 public:
     explicit hardTwo(QWidget *parent = nullptr);
     ~hardTwo();
+    void timerEvent(QTimerEvent *event) override;
 
 private slots:
     void on_pushButton14_clicked();
@@ -28,6 +30,8 @@ private slots:
 
 private:
     Ui::hardTwo *ui;
+    int counter = 10;
+    int timerId;
 };
 
 #endif // HARDTWO_H

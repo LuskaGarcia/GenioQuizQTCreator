@@ -24,6 +24,7 @@ void hardOne::timerEvent(QTimerEvent *event){
     if(counter == 0){
         gameOver GameOver;
         GameOver.setModal(true);
+        killTimer(timerId);
         GameOver.exec();
     }
 }

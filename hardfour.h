@@ -2,6 +2,7 @@
 #define HARDFOUR_H
 
 #include <QDialog>
+#include<QTimerEvent>
 
 namespace Ui {
 class hardFour;
@@ -14,6 +15,7 @@ class hardFour : public QDialog
 public:
     explicit hardFour(QWidget *parent = nullptr);
     ~hardFour();
+    void timerEvent(QTimerEvent *event) override;
 
 private slots:
     void on_correctButton_clicked();
@@ -30,6 +32,8 @@ private slots:
 
 private:
     Ui::hardFour *ui;
+    int counter = 10;
+    int timerId;
 };
 
 #endif // HARDFOUR_H
