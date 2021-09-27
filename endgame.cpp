@@ -2,6 +2,7 @@
 #include "ui_endgame.h"
 #include "mainwindow.h"
 #include "questionseasy.h"
+#include <QProcess>
 
 endGame::endGame(QWidget *parent) :
     QDialog(parent),
@@ -17,11 +18,8 @@ endGame::~endGame()
 
 void endGame::on_menuButton_clicked()
 {
-    this->close();
-    QuestionsEasy *window = new QuestionsEasy(this);
-    window -> hide();
-    MainWindow *dialog = new MainWindow(this);
-    dialog->show();
+    qApp->quit();
+    QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
 
 
 }

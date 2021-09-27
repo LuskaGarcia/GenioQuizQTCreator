@@ -2,6 +2,7 @@
 #include "ui_gameover.h"
 #include "mainwindow.h"
 #include "questionseasy.h"
+#include <QProcess>
 
 gameOver::gameOver(QWidget *parent) :
     QDialog(parent),
@@ -17,14 +18,8 @@ gameOver::~gameOver()
 
 void gameOver::on_pushButton_clicked()
 {
-    this->close();
-    QuestionsEasy *window = new QuestionsEasy(this);
-    window -> hide();
-    MainWindow *dialog = new MainWindow(this);
-    dialog->showNormal();
-    dialog->isEnabled();
-
-
+    qApp->quit();
+    QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
 
 }
 

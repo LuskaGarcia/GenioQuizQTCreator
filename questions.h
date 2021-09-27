@@ -22,9 +22,9 @@ private:
     int lastanswer;
     int m_lastquestion;
 
-    QString quests[10];
-    QString answers[10][4];
-    bool correct_answer[10][4];
+    QString quests[15];
+    QString answers[15][4];
+    bool correct_answer[15][4];
 };
 
 #endif // QUESTIONS_H

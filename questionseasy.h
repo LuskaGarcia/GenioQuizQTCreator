@@ -15,6 +15,14 @@ public:
     explicit QuestionsEasy(QWidget *parent = nullptr);
     ~QuestionsEasy();
 
+    void setDificuldade(int dif){
+        dificuldade = dif;
+    }
+
+    int getDificuldade(){
+        return dificuldade;
+    }
+
 private slots:
     void on_questionOneButton_clicked();
 
@@ -28,6 +36,7 @@ private slots:
 
 private:
     Ui::QuestionsEasy *ui;
+    int dificuldade;
 };
 
 #endif // QUESTIONSEASY_H

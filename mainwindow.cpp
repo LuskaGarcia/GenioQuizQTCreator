@@ -23,6 +23,7 @@ void MainWindow::on_buttonEasy_clicked()
 {
 
     QuestionsEasy questionsEasy;
+    questionsEasy.setDificuldade(0);
     questionsEasy.setModal(true);
     questionsEasy.exec();
     this->hide();
@@ -31,6 +32,12 @@ void MainWindow::on_buttonEasy_clicked()
 
 void MainWindow::on_buttonMedium_clicked()
 {
+    QuestionsEasy questionsEasy;
+    questionsEasy.setDificuldade(1);
+    questionsEasy.setModal(true);
+    questionsEasy.exec();
+    this->hide();
+
 
 }
 
@@ -38,10 +45,11 @@ void MainWindow::on_buttonMedium_clicked()
 void MainWindow::on_buttonHard_clicked()
 {
 
-    gameOver GameOver;
-    GameOver.setModal(true);
-    GameOver.exec();
-
+    QuestionsEasy questionsEasy;
+    questionsEasy.setDificuldade(2);
+    questionsEasy.setModal(true);
+    questionsEasy.exec();
+    this->hide();
 
 }
 

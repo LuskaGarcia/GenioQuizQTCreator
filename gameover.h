@@ -18,8 +18,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+
 private:
     Ui::gameOver *ui;
 };
 
 #endif // GAMEOVER_H
+
+

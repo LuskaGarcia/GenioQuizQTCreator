@@ -3,6 +3,8 @@
 #include "questions.h"
 #include "gameover.h"
 #include "endgame.h"
+#include "mainwindow.h"
+#include "mainwindow.cpp"
 
 int questioncount = 1;
 int increasequestion = 0;
@@ -34,9 +36,15 @@ QuestionsEasy::~QuestionsEasy()
 
 void QuestionsEasy::on_questionOneButton_clicked()
 {
+    if(getDificuldade()==0){
         if(increasequestion == 9)
         {
             if(question->getCorrectAnswer(0) == true){
+                if(increasequestion==9){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
             }
 
             else
@@ -59,6 +67,7 @@ void QuestionsEasy::on_questionOneButton_clicked()
         else
         {
             if(question->getCorrectAnswer(0) == true){
+
             }
 
             else
@@ -74,6 +83,64 @@ void QuestionsEasy::on_questionOneButton_clicked()
 
             question->IncreaseQuestion(increasequestion++);
 
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(0) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
+
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(0) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
 
             ui->numberQuestion->setText(QString::number(questioncount++));
             ui->questionText->setText(question->nextQuestion());
@@ -85,7 +152,69 @@ void QuestionsEasy::on_questionOneButton_clicked()
             ui->questionThreeButton->setVisible(true);
             ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
             ui->questionFourButton->setVisible(true);
+
         }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(0) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
+
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(0) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }
+
 
     }
 
@@ -93,167 +222,552 @@ void QuestionsEasy::on_questionOneButton_clicked()
 void QuestionsEasy::on_questionTwoButton_clicked()
 {
 
-    if(increasequestion == 9)
-    {
-        if(question->getCorrectAnswer(0) == true){
+    if(getDificuldade()==0){
+        if(increasequestion == 9)
+        {
+            if(question->getCorrectAnswer(1) == true){
+                if(increasequestion==9){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
+
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
         }
 
         else
         {
-            gameOver GameOver;
-            GameOver.setModal(true);
-            GameOver.exec();
+            if(question->getCorrectAnswer(1) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
         }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(1) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
 
-        ui->helpButton->setVisible(false);
-        ui->questionOneButton->setVisible(false);
-        ui->questionTwoButton->setVisible(false);
-        ui->questionThreeButton->setVisible(false);
-        ui->questionFourButton->setVisible(false);
-        ui->questionText->setVisible(false);
-        ui->numberQuestion->setVisible(false);
-    }
-
-    else
-    {
-        if(question->getCorrectAnswer(1) == true){
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
         }
 
         else
         {
-            gameOver GameOver;
-            GameOver.setModal(true);
-            GameOver.exec();
+            if(question->getCorrectAnswer(1) == true){
 
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
 
         }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(1) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
 
-        int alternatives = 0;
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
-        question->IncreaseQuestion(increasequestion++);
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(1) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
 
 
-        ui->numberQuestion->setText(QString::number(questioncount++));
-        ui->questionText->setText(question->nextQuestion());
-        ui->questionOneButton->setText(question->getAnswer(alternatives));
-        ui->questionOneButton->setVisible(true);
-        ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
-        ui->questionTwoButton->setVisible(true);
-        ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
-        ui->questionThreeButton->setVisible(true);
-        ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
-        ui->questionFourButton->setVisible(true);
-    }
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }
 }
 
 
 void QuestionsEasy::on_questionThreeButton_clicked()
 {
 
-    if(increasequestion == 9)
-    {
-        if(question->getCorrectAnswer(0) == true)        {
-        }
+    if(getDificuldade()==0){
+        if(increasequestion == 9)
+        {
+            if(question->getCorrectAnswer(2) == true){
+                if(increasequestion==9){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
 
-        ui->helpButton->setVisible(false);
-        ui->questionOneButton->setVisible(false);
-        ui->questionTwoButton->setVisible(false);
-        ui->questionThreeButton->setVisible(false);
-        ui->questionFourButton->setVisible(false);
-        ui->questionText->setVisible(false);
-        ui->numberQuestion->setVisible(false);
-    }
-
-    else
-    {
-        if(question->getCorrectAnswer(2) == true){
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
         }
 
         else
         {
-            gameOver GameOver;
-            GameOver.setModal(true);
-            GameOver.exec();
+            if(question->getCorrectAnswer(2) == true){
 
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
 
         }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(2) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
 
-        int alternatives = 0;
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
-        question->IncreaseQuestion(increasequestion++);
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(2) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
 
 
-        ui->numberQuestion->setText(QString::number(questioncount++));
-        ui->questionText->setText(question->nextQuestion());
-        ui->questionOneButton->setText(question->getAnswer(alternatives));
-        ui->questionOneButton->setVisible(true);
-        ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
-        ui->questionTwoButton->setVisible(true);
-        ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
-        ui->questionThreeButton->setVisible(true);
-        ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
-        ui->questionFourButton->setVisible(true);
-    }
+            }
 
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }else if(getDificuldade()==1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(2) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
+
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(2) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }
 }
 
 
 void QuestionsEasy::on_questionFourButton_clicked()
 {
-    if(increasequestion == 9)
-    {
-        if(question->getCorrectAnswer(0) == true){
+    if(getDificuldade()==0){
+        if(increasequestion == 9)
+        {
+            if(question->getCorrectAnswer(3) == true){
+                if(increasequestion==9){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
+
+
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
         }
 
         else
         {
-            gameOver GameOver;
-            GameOver.setModal(true);
-            GameOver.exec();
+            if(question->getCorrectAnswer(3) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
         }
+       }else if(getDificuldade() == 1){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(3) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
 
-        ui->helpButton->setVisible(false);
-        ui->questionOneButton->setVisible(false);
-        ui->questionTwoButton->setVisible(false);
-        ui->questionThreeButton->setVisible(false);
-        ui->questionFourButton->setVisible(false);
-        ui->questionText->setVisible(false);
-        ui->numberQuestion->setVisible(false);
-    }
-
-    else
-    {
-        if(question->getCorrectAnswer(3) == true){
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
         }
 
         else
         {
-            gameOver GameOver;
-            GameOver.setModal(true);
-            GameOver.exec();
+            if(question->getCorrectAnswer(3) == true){
 
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
 
         }
 
-        int alternatives = 0;
+       }else if(getDificuldade()==2){
+        if(increasequestion == 14)
+        {
+            if(question->getCorrectAnswer(3) == true){
+                if(increasequestion==14){
+                        endGame EndGame;
+                        EndGame.setModal(true);
+                        EndGame.exec();
+                    }
+            }
 
-        question->IncreaseQuestion(increasequestion++);
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+            }
 
 
-        ui->numberQuestion->setText(QString::number(questioncount++));
-        ui->questionText->setText(question->nextQuestion());
-        ui->questionOneButton->setText(question->getAnswer(alternatives));
-        ui->questionOneButton->setVisible(true);
-        ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
-        ui->questionTwoButton->setVisible(true);
-        ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
-        ui->questionThreeButton->setVisible(true);
-        ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
-        ui->questionFourButton->setVisible(true);
-    }
+            ui->helpButton->setVisible(false);
+            ui->questionOneButton->setVisible(false);
+            ui->questionTwoButton->setVisible(false);
+            ui->questionThreeButton->setVisible(false);
+            ui->questionFourButton->setVisible(false);
+            ui->questionText->setVisible(false);
+            ui->numberQuestion->setVisible(false);
+        }
+
+        else
+        {
+            if(question->getCorrectAnswer(3) == true){
+
+            }
+
+            else
+            {
+                gameOver GameOver;
+                GameOver.setModal(true);
+                GameOver.exec();
+
+
+            }
+
+            int alternatives = 0;
+
+            question->IncreaseQuestion(increasequestion++);
+
+            ui->numberQuestion->setText(QString::number(questioncount++));
+            ui->questionText->setText(question->nextQuestion());
+            ui->questionOneButton->setText(question->getAnswer(alternatives));
+            ui->questionOneButton->setVisible(true);
+            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+            ui->questionTwoButton->setVisible(true);
+            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+            ui->questionThreeButton->setVisible(true);
+            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+            ui->questionFourButton->setVisible(true);
+
+        }
+       }
 
 }
 
