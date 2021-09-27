@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>297</x>
+      <y>250</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Criado por: Lucas Floriano Garcia</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>251</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atenção aos detalhes</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>280</width>
+      <height>194</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>GêNlo QUiz</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Selecione a dificuldade:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="buttonEasy">
+         <property name="text">
+          <string>Fácil</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonMedium">
+         <property name="text">
+          <string>Médio</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonHard">
+         <property name="text">
+          <string>Difícil</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>485</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout_Program">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuAre_you_Sure">
+     <property name="title">
+      <string>Are you Sure?</string>
+     </property>
+     <widget class="QMenu" name="menuThe_Password">
+      <property name="title">
+       <string>The Password?</string>
+      </property>
+      <widget class="QMenu" name="menuContinue">
+       <property name="title">
+        <string>Continue</string>
+       </property>
+       <widget class="QMenu" name="menuOne_more">
+        <property name="title">
+         <string>One more</string>
+        </property>
+        <widget class="QMenu" name="menuWell_Played">
+         <property name="title">
+          <string>Well Played</string>
+         </property>
+         <addaction name="separator"/>
+         <addaction name="action504762"/>
+         <addaction name="actionThe_password"/>
+        </widget>
+        <addaction name="menuWell_Played"/>
+       </widget>
+       <addaction name="menuOne_more"/>
+      </widget>
+      <addaction name="menuContinue"/>
+     </widget>
+     <addaction name="menuThe_Password"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_Me"/>
+    <addaction name="actionAbout_Project_2"/>
+    <addaction name="separator"/>
+    <addaction name="menuAre_you_Sure"/>
+   </widget>
+   <addaction name="menuAbout_Program"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout_Me">
+   <property name="text">
+    <string>About Me</string>
+   </property>
+  </action>
+  <action name="actionAbout_Project_2">
+   <property name="text">
+    <string>About Project</string>
+   </property>
+  </action>
+  <action name="action504762">
+   <property name="text">
+    <string>504762</string>
+   </property>
+  </action>
+  <action name="actionThe_password">
+   <property name="text">
+    <string>The password </string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
