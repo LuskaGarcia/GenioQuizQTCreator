@@ -25,6 +25,7 @@ QuestionsEasy::QuestionsEasy(QWidget *parent) :
     ui->questionThreeButton->setText(question->getAnswer(2));
     ui->questionFourButton->setText(question->getAnswer(3));
     ui->numberQuestion->setText(QString::number(questioncount++));
+
 }
 
 QuestionsEasy::~QuestionsEasy()
@@ -41,10 +42,10 @@ void QuestionsEasy::on_questionOneButton_clicked()
         {
             if(question->getCorrectAnswer(0) == true){
                 if(increasequestion==9){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -95,15 +96,15 @@ void QuestionsEasy::on_questionOneButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==1){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(0) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -154,15 +155,17 @@ void QuestionsEasy::on_questionOneButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==2){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(0) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    hardOne HardOne;
+                    HardOne.setModal(true);
+                    this->close();
+                    HardOne.exec();
+
+                }
             }
 
             else
@@ -213,10 +216,10 @@ void QuestionsEasy::on_questionOneButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }
-
-
     }
+
+
+}
 
 
 void QuestionsEasy::on_questionTwoButton_clicked()
@@ -227,10 +230,10 @@ void QuestionsEasy::on_questionTwoButton_clicked()
         {
             if(question->getCorrectAnswer(1) == true){
                 if(increasequestion==9){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -281,15 +284,15 @@ void QuestionsEasy::on_questionTwoButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==1){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(1) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -340,15 +343,17 @@ void QuestionsEasy::on_questionTwoButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==2){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(1) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    hardOne HardOne;
+                    HardOne.setModal(true);
+                    this->close();
+                    HardOne.exec();
+
+                }
             }
 
             else
@@ -399,7 +404,7 @@ void QuestionsEasy::on_questionTwoButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }
+    }
 }
 
 
@@ -411,10 +416,10 @@ void QuestionsEasy::on_questionThreeButton_clicked()
         {
             if(question->getCorrectAnswer(2) == true){
                 if(increasequestion==9){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -465,15 +470,15 @@ void QuestionsEasy::on_questionThreeButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==1){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(2) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -524,15 +529,17 @@ void QuestionsEasy::on_questionThreeButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade()==1){
+    }else if(getDificuldade()==2){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(2) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    hardOne HardOne;
+                    HardOne.setModal(true);
+                    this->close();
+                    HardOne.exec();
+
+                }
             }
 
             else
@@ -583,7 +590,7 @@ void QuestionsEasy::on_questionThreeButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }
+    }
 }
 
 
@@ -594,10 +601,10 @@ void QuestionsEasy::on_questionFourButton_clicked()
         {
             if(question->getCorrectAnswer(3) == true){
                 if(increasequestion==9){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -648,15 +655,15 @@ void QuestionsEasy::on_questionFourButton_clicked()
             ui->questionFourButton->setVisible(true);
 
         }
-       }else if(getDificuldade() == 1){
+    }else if(getDificuldade() == 1){
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(3) == true){
                 if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                    endGame EndGame;
+                    EndGame.setModal(true);
+                    EndGame.exec();
+                }
             }
 
             else
@@ -708,67 +715,66 @@ void QuestionsEasy::on_questionFourButton_clicked()
 
         }
 
-       }else if(getDificuldade()==2){
+    }else if(getDificuldade()==2) {
         if(increasequestion == 14)
         {
             if(question->getCorrectAnswer(3) == true){
-                if(increasequestion==14){
-                        endGame EndGame;
-                        EndGame.setModal(true);
-                        EndGame.exec();
-                    }
+                hardOne HardOne;
+                HardOne.setModal(true);
+                this->close();
+                HardOne.exec();
+
             }
 
-            else
-            {
-                gameOver GameOver;
-                GameOver.setModal(true);
-                GameOver.exec();
-            }
+        else
+        {
+            gameOver GameOver;
+            GameOver.setModal(true);
+            GameOver.exec();
+        }
 
 
-            ui->helpButton->setVisible(false);
-            ui->questionOneButton->setVisible(false);
-            ui->questionTwoButton->setVisible(false);
-            ui->questionThreeButton->setVisible(false);
-            ui->questionFourButton->setVisible(false);
-            ui->questionText->setVisible(false);
-            ui->numberQuestion->setVisible(false);
+        ui->helpButton->setVisible(false);
+        ui->questionOneButton->setVisible(false);
+        ui->questionTwoButton->setVisible(false);
+        ui->questionThreeButton->setVisible(false);
+        ui->questionFourButton->setVisible(false);
+        ui->questionText->setVisible(false);
+        ui->numberQuestion->setVisible(false);
+    }
+
+    else
+    {
+        if(question->getCorrectAnswer(3) == true){
+
         }
 
         else
         {
-            if(question->getCorrectAnswer(3) == true){
+            gameOver GameOver;
+            GameOver.setModal(true);
+            GameOver.exec();
 
-            }
-
-            else
-            {
-                gameOver GameOver;
-                GameOver.setModal(true);
-                GameOver.exec();
-
-
-            }
-
-            int alternatives = 0;
-
-            question->IncreaseQuestion(increasequestion++);
-
-            ui->numberQuestion->setText(QString::number(questioncount++));
-            ui->questionText->setText(question->nextQuestion());
-            ui->questionOneButton->setText(question->getAnswer(alternatives));
-            ui->questionOneButton->setVisible(true);
-            ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
-            ui->questionTwoButton->setVisible(true);
-            ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
-            ui->questionThreeButton->setVisible(true);
-            ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
-            ui->questionFourButton->setVisible(true);
 
         }
-       }
 
+        int alternatives = 0;
+
+        question->IncreaseQuestion(increasequestion++);
+
+        ui->numberQuestion->setText(QString::number(questioncount++));
+        ui->questionText->setText(question->nextQuestion());
+        ui->questionOneButton->setText(question->getAnswer(alternatives));
+        ui->questionOneButton->setVisible(true);
+        ui->questionTwoButton->setText(question->getAnswer(alternatives + 1));
+        ui->questionTwoButton->setVisible(true);
+        ui->questionThreeButton->setText(question->getAnswer(alternatives + 2));
+        ui->questionThreeButton->setVisible(true);
+        ui->questionFourButton->setText(question->getAnswer(alternatives + 3));
+        ui->questionFourButton->setVisible(true);
+
+    }
+   }
 }
 
 
@@ -777,6 +783,7 @@ void QuestionsEasy::on_helpButton_clicked()
 {
     gameOver GameOver;
     GameOver.setModal(true);
+    this->close();
     GameOver.exec();
 }
 

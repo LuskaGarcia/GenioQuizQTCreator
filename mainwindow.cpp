@@ -4,6 +4,7 @@
 #include "aboutproject.h"
 #include "questionseasy.h"
 #include "gameover.h"
+#include "hardone.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -44,6 +45,7 @@ void MainWindow::on_buttonMedium_clicked()
 
 void MainWindow::on_buttonHard_clicked()
 {
+
 
     QuestionsEasy questionsEasy;
     questionsEasy.setDificuldade(2);

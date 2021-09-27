@@ -13,6 +13,11 @@ SOURCES += \
     aboutproject.cpp \
     endgame.cpp \
     gameover.cpp \
+    hardfive.cpp \
+    hardfour.cpp \
+    hardone.cpp \
+    hardthree.cpp \
+    hardtwo.cpp \
     main.cpp \
     mainwindow.cpp \
     questions.cpp \
@@ -23,6 +28,11 @@ HEADERS += \
     aboutproject.h \
     endgame.h \
     gameover.h \
+    hardfive.h \
+    hardfour.h \
+    hardone.h \
+    hardthree.h \
+    hardtwo.h \
     mainwindow.h \
     questions.h \
     questionseasy.h
@@ -32,6 +42,11 @@ FORMS += \
     aboutproject.ui \
     endgame.ui \
     gameover.ui \
+    hardfive.ui \
+    hardfour.ui \
+    hardone.ui \
+    hardthree.ui \
+    hardtwo.ui \
     mainwindow.ui \
     questionseasy.ui
 
